@@ -11,7 +11,7 @@ Qualquer visitante da página pode acessar e ler as mensagens do site, mas apena
 ### Objetivos do front-end
 
 Os objetivos maiores do projeto por parte do front-end são:
-  - Criar sistema de autentificação com JWT;
+  - Criar sistema de autenticação com JWT;
     - Restringir rotas com base no usuário
   - UI Impressionante;
     - Responsivo
