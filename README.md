@@ -36,6 +36,8 @@ Os objetivos maiores do projeto por parte do front-end são:
 
 Alguns vídeos e guias que ajudaram no desenvolvimento deste projeto:
 
+[]()
+
 ### Aprendizados
 
 O que aprendi, técnicas e comandos, durante esse projeto (para o João do futuro consultar, de nada futuro eu):
