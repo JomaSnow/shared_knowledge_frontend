@@ -36,7 +36,11 @@ Os objetivos maiores do projeto por parte do front-end são:
 
 Alguns vídeos e guias que ajudaram no desenvolvimento deste projeto:
 
-[]()
+- [Axios com TypeScript - blog](https://bobbyhadz.com/blog/typescript-http-request-axios)
+- [Iniciando com React Router - documentação](https://github.com/remix-run/react-router/blob/main/docs/start/tutorial.md)
+- [Usando JWT-Decode - documentação](https://www.npmjs.com/package/jwt-decode)
+- [Adcionando campos em tipos já definidos TypeScript - stackoverflow](https://stackoverflow.com/questions/40876478/how-do-you-add-a-property-to-an-existing-type-in-typescript)
+
 
 ### Aprendizados
 
