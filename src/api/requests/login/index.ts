@@ -35,12 +35,12 @@ export function logout(): string | undefined {
   }
 }
 
-export function isLoggedIn(decodedUser?: User): boolean | string {
+export function isLoggedIn(decodedUser?: User): boolean {
   try {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      throw new Error("Não logado.");
+      throw new Error("Você precisa estar logado para acessar esta página.");
     }
 
     const decoded = jwtDecode<User & { exp: number; iat: number; sub: string }>(
@@ -48,12 +48,12 @@ export function isLoggedIn(decodedUser?: User): boolean | string {
     );
 
     if (!decoded) {
-      throw new Error("Não logado.");
+      throw new Error("Não é um token válido.");
     }
 
-    if (decoded.exp < Date.now()) {
+    if (decoded.exp * 1000 < Date.now()) {
       logout();
-      throw new Error("Não logado.");
+      throw new Error("Sessão expirada.");
     }
 
     if (decodedUser) {
@@ -62,7 +62,7 @@ export function isLoggedIn(decodedUser?: User): boolean | string {
 
     return true;
   } catch (error) {
-    return `Ocorreu um erro. ${error}`;
+    throw new Error(`${error}`);
   }
 }
 
@@ -79,6 +79,6 @@ export function isAdmin(): boolean | string {
     }
     return false;
   } catch (error) {
-    return `Ocorreu um erro. ${error}`;
+    throw new Error(`${error}`);
   }
 }

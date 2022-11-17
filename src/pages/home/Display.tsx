@@ -1,9 +1,14 @@
 import { StyledMain, PageTitle } from "./styles";
 
-const Display = () => {
+type Props = {
+  errorMsg?: string;
+};
+
+const Display: React.FC<Props> = ({ errorMsg }) => {
   return (
     <StyledMain>
       <PageTitle>Display Home</PageTitle>
+      {errorMsg}
     </StyledMain>
   );
 };
